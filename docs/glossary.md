@@ -6,8 +6,9 @@
 
 | 中文 | English | 缩写 / 同义 | 解释 |
 |---|---|---|---|
-| 镜头 / 镜次 | Shot · Cut | shot, cut | 一段连续画面，制片表的一行 = 一个镜头 |
-| 场次 | Scene · Sequence | seq, scene | 多个镜头组成一场戏，比如 S1（第一场） |
+| 镜头 / 镜次 | Shot · Cut | shot, cut, **C** | 一段连续画面，制片表的一行 = 一个镜头。命名缩写 `C` |
+| 场次 | Scene · Sequence | seq, scene, **S** | 多个镜头组成一场戏，比如 S1（第一场）。命名缩写 `S` |
+| 镜头编号 / 命名规范 | Shot ID convention | `S{n}C{nnn}` | **本 base 标准命名**：`S1C001` / `S1C002` / `S2C015` ……。`S` = Scene、`C` = Cut。`S1` 前缀自动对应「场次」字段的 S1 选项 |
 | 分镜 / 分镜表 | Storyboard | sb | 把剧本拆成一个个镜头的设计文档 |
 | 制片表 | Production table · Shot tracker | prod sheet | 跟踪每个镜头各阶段进度的表格，本 repo 的核心 |
 | 参考 | Reference | ref | 透视、Book、美术分配等前置参考材料 |
