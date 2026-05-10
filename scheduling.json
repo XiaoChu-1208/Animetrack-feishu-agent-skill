@@ -28,7 +28,19 @@
     "合成":     { "person": "fldd2EjTTQ", "start": "fld4vCQpsq", "end": "fld87th4Se", "progress": "fldxX2sOKx" }
   },
   "constraints": {
-    "perPersonConcurrent": 2,
+    "_comment": "并发上限按难度分。S/A/B 卡是真活，同人只能 1 张同时；C 卡是顺手活，可以和任何任务并行堆叠。",
+    "perPersonConcurrentByDifficulty": {
+      "S": 1,
+      "A": 1,
+      "B": 1,
+      "C": "unlimited",
+      "_meaning": {
+        "1": "同一负责人手上同时只能进行 1 张此难度的任务，第 N+1 张接续 N 的结束日",
+        "unlimited": "可与同人手上其他任务（含 S/A/B）任意叠加，对关键路径长度不贡献"
+      }
+    },
+    "perPersonConcurrent_legacy": 1,
+    "_legacy_note": "perPersonConcurrent_legacy 是旧字段；优先使用 perPersonConcurrentByDifficulty。",
     "weekWorkDays": 5,
     "skipWeekends": true,
     "bufferRatio": 0.15,
