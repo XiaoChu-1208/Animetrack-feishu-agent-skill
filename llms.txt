@@ -1,8 +1,12 @@
 # Animetrack · 飞书制片表智能体 Skill
 
+> **Author**: 小刍 (XiaoChu) · **Contact**: chizhu1208@163.com · **License**: MIT · **Repo**: https://github.com/XiaoChu-1208/Animetrack-feishu-agent-skill
+
 > Feishu Aily / Lark agent skill that lets a Chinese-language AI agent operate a Feishu (飞书 / Lark) multi-dimensional bitable (多维表格) for anime / animation production tracking. Built for art teams (non-developers). Provides shot tracking, weighted completion calculation by difficulty (S/A/B/C card weighting), auto-scheduling with workload constraints, team-member assignment, customization intake, plan→write→test→confirm→rollback workflow, and a soft non-anxious reporting style.
 
 > **Audience**: animation studios, indie anime teams, short-film production crews, anyone using Feishu Bitable to track shots through a 7-stage pipeline (参考 → 角色原画 → 清线 → 上色, with 绘景 and 3D/VFX in parallel, all merging into 合成).
+
+> **Bundled .base template** (制片表 v4.1 公版): 46 pre-configured fields, 10 views (overview / staff allocation / per-stage gantt views / simple progress chart), 13 deployed automations (4 deadline reminders, 5 stage transitions, 3 message Q&A handlers, 1 daily cron digest), Stage field with NextStage auto-progression on attachment upload, dual milestones (DDL + ☠️), one-click archive for project switching.
 
 > **Language**: documentation primarily Chinese (zh-CN); domain glossary bilingual zh/en; agent operates in user's spoken language.
 
