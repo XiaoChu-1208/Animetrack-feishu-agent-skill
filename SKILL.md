@@ -805,3 +805,6 @@ C. 先记下来
 - [`customizations.md`](customizations.md) — 自定义变更日志（§13 吸收 + §14 新功能流程产出，append-only，含 revert 类型）
 - `.history/` — §14 自动产生的备份目录；`{name}.bak.{timestamp}` 文件 + `undo_{txnId}.json` 反向操作日志；保留最近 10 个版本或 30 天
 - `制片表 v4.1 （公版） .base` — 飞书多维表格模板（用户用，agent 不读）；新项目时引导用户在飞书"新建多维表格 → 从 .base 导入"
+- [`docs/glossary.md`](docs/glossary.md) — 中英双语术语对照（动画制作 / 飞书多维表格 / 本 skill 特定术语）
+- [`docs/use-cases.md`](docs/use-cases.md) — 8 个真实场景对话示例
+- [`llms.txt`](llms.txt) — AI 引擎索引文件（llmstxt.org 标准）

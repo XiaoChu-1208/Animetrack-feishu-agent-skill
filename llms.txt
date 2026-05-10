@@ -1,0 +1,36 @@
+# Animetrack · 飞书制片表智能体 Skill
+
+> Feishu Aily / Lark agent skill that lets a Chinese-language AI agent operate a Feishu (飞书 / Lark) multi-dimensional bitable (多维表格) for anime / animation production tracking. Built for art teams (non-developers). Provides shot tracking, weighted completion calculation by difficulty (S/A/B/C card weighting), auto-scheduling with workload constraints, team-member assignment, customization intake, plan→write→test→confirm→rollback workflow, and a soft non-anxious reporting style.
+
+> **Audience**: animation studios, indie anime teams, short-film production crews, anyone using Feishu Bitable to track shots through a 7-stage pipeline (参考 → 角色原画 → 清线 → 上色, with 绘景 and 3D/VFX in parallel, all merging into 合成).
+
+> **Language**: documentation primarily Chinese (zh-CN); domain glossary bilingual zh/en; agent operates in user's spoken language.
+
+## Documentation
+
+- [README.md](README.md): Plain-language onboarding guide for art teams. 6-step install (open Aily → download repo → import .base → upload zip → set persona → first chat). 27-entry FAQ across usage, operation, production knowledge, customization, troubleshooting.
+- [BOOTSTRAP.md](BOOTSTRAP.md): First-run setup flow for both users and the agent. User view: import flow, share-link extraction, project naming. Agent view: 4-question serial bootstrap dialog, app_token extraction from /base/ and /wiki/ links, schema match modes, runtime.json initialization.
+- [SKILL.md](SKILL.md): Full agent rule book, 15 sections. Includes report style (short/flat/gentle, no alarm emojis), field schema reference, stage transition rules, 13 deployed automations, common operation playbooks (filename auto-archive, time edits, rework annotation, delay notifications, progress queries, weighted completion stats), project lifecycle (new project, archive, table rename), team roster, auto-assignment, scheduling algorithm, daily patrol checklist, custom field intake, new feature dev workflow with plan/write/test/confirm/rollback, and ten universal fallback principles.
+
+## Configuration
+
+- [fields.json](fields.json): All 46 main-table field definitions with stable Feishu field IDs (fldXXXXXX), types, options, multiplicity. Categorized into identity / attachments / stage_completion / people / schedule / system. Includes filename → field heuristic mapping and stage-transition definitions.
+- [workflows.json](workflows.json): 13 deployed Feishu automations summarized. 4 datetime-triggered deadline reminders, 5 setRecord-triggered stage transitions, 3 message-triggered Q&A handlers, 1 cron daily digest.
+- [scheduling.json](scheduling.json): Per-stage × per-difficulty workload matrix (in workdays). Stage DAG with dependencies. Stage-to-fields mapping. Constraints (per-person concurrent limit, week workdays, buffer ratio, default difficulty). Completion calculation weights derived from total workload (S=23, A=16.5, B=11, C=6.5 workdays).
+- [team.json](team.json): Team-config table schema template with question script for first-time team registration.
+
+## Reference
+
+- [docs/glossary.md](docs/glossary.md): Bilingual zh-CN / en glossary of animation production terms (shot, scene, key animation, clean-up, coloring, BG, compositing, retake, difficulty levels) and Feishu Bitable terms (app_token, base_token, table_id, field_id, automation, view, attachment field).
+- [docs/use-cases.md](docs/use-cases.md): Realistic scenarios with example dialogues — daily standup progress check, deadline chasing, new member onboarding, project archival, rework flow, mid-project schedule adjustment, weekly digest.
+
+## Operational state
+
+- [runtime.json](runtime.json): Per-binding state file; empty in repo, populated at first agent run with bound base app_token, project name, DDL date, schema match mode.
+- [customizations.md](customizations.md): Append-only changelog of user customizations (new fields, renamed fields, deprecated fields, new options, new views, new tables, new automations, reverts).
+
+## Optional
+
+- [LICENSE](LICENSE): MIT
+- [.history/README.md](.history/README.md): Backup directory contract; .bak.{timestamp} format and undo_{txnId}.json reverse-operation log spec.
+- [制片表 v4.1 （公版） .base](制片表%20v4.1%20%EF%BC%88%E5%85%AC%E7%89%88%EF%BC%89%20.base): Feishu Bitable template (binary; users import via 新建 → 多维表格 → 从 .base 导入).
