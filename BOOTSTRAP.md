@@ -107,7 +107,11 @@ Agent 会自动从链接抽 `app_token`，写到 `runtime.json`，然后接着�
 谢谢，我提取一下信息……
 ```
 
-从链接抽 `app_token`（格式 `https://*.feishu.cn/base/{app_token}` 或 `/wiki/{wikitoken}` 等变体）。如果抽不到 → 「这个链接里没看到 app_token，要不你用浏览器打开表，把地址栏整段发我？」
+从链接抽 `app_token`。两种合法格式（用户在飞书表右上角「分享 → 复制链接」拿到的就是这个）：
+- `https://*.feishu.cn/base/{app_token}` — 直接 base 链接
+- `https://*.feishu.cn/wiki/{wiki_token}` — wiki 链接（需要先用 `wiki/v2/spaces/get_node` API 把 wiki_token 换成 obj_token，那才是真正的 app_token）
+
+如果抽不到 → 「这个链接看不出来是哪张表，要不你在飞书里点「分享 → 复制链接」再发我一次？」
 
 抽到 token 后立即用 Open API 拿表元信息，对照 `fields.json`：
 - 字段 ID 全对得上 → 是模板克隆出来的，干净接入

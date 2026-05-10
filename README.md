@@ -41,7 +41,17 @@
 
 ---
 
-## 安装步骤（5 步）
+## 安装步骤（6 步）
+
+### 第 0 步：在飞书里开个智能体
+
+打开飞书 → 顶部搜索框 → 输入「**智能体**」→ 点击 **飞书 aily** 应用：
+
+![飞书搜索智能体](docs/images/feishu-search-aily.png)
+
+进去之后点「**智能伙伴**」创建一个新的（这个智能体本质上是飞书集成的 LobeChat 那一套，长得熟）。
+
+> 没出现 aily 应用？那是你们公司还没开通——找飞书管理员开「飞书智能伙伴 / aily」即可。个人版用户去飞书官网申请。
 
 ### 第 1 步：下载这个文件夹
 
@@ -189,7 +199,13 @@ git clone https://github.com/XiaoChu-1208/Animetrack-feishu-agent-skill.git
 ### B 类：操作细节
 
 **Q7. 多维表格的链接在哪里复制？**
-用浏览器打开你的多维表格，地址栏整段复制。形式像 `https://xxx.feishu.cn/base/AbCd1234567890...` 这样。
+打开你的多维表格 → 右上角「**分享**」按钮 → 「**复制链接**」。
+
+链接可能是这两种格式之一，**两种都行**，智能体都能识别：
+- `https://xxx.feishu.cn/base/AbCd1234567890...`（直接 base 链接）
+- `https://xxx.feishu.cn/wiki/XYZ987654321...`（放在知识库里的 wiki 链接）
+
+复制完粘贴给智能体就行。
 
 **Q8. 智能体会自己改我的表吗？怕它乱改**
 - **小事**直接做完告诉你（比如改一个截止日）
@@ -306,13 +322,9 @@ SKILL 里有「短、平、柔」三原则约束，默认报告 ≤ 200 字 / 10
 
 ---
 
-## 致谢
-
-模板基于 STORYCUT 项目实战中迭代的「制片表 v4.1（公版）」。SKILL 框架感谢飞书 Aily 平台。
-
 ## 反馈
 
-issue 直接开在这个 repo 里：[Issues](https://github.com/XiaoChu-1208/Animetrack-feishu-agent-skill/issues)
+有问题、踩到坑、想加功能 → 直接开 [Issues](https://github.com/XiaoChu-1208/Animetrack-feishu-agent-skill/issues)，不用客气。
 
 ## License
 
