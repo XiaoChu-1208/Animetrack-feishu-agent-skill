@@ -1,0 +1,646 @@
+{
+  "baseId": "7621355715340324033",
+  "baseName": "制片表 v4.1 （公版）",
+  "tableId": "tblxJGAeyRCOWOwa",
+  "tableName": "Named it（on）",
+  "primaryKey": "fldG04l9e4",
+  "fields": {
+    "fldhhN9HAA": {
+      "id": "fldhhN9HAA",
+      "name": "绘景",
+      "type": 17,
+      "typeName": "Attachment"
+    },
+    "fld87th4Se": {
+      "id": "fld87th4Se",
+      "name": "排期终点（合成）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "MM-dd"
+    },
+    "fldXynPjpD": {
+      "id": "fldXynPjpD",
+      "name": "排期终点（角色原画）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "MM-dd"
+    },
+    "fldFMjGeab": {
+      "id": "fldFMjGeab",
+      "name": "绘景是否完成",
+      "type": 3,
+      "typeName": "SingleSelect/Status",
+      "options": [
+        {
+          "id": "opt16hLuBq",
+          "name": "已完成"
+        },
+        {
+          "id": "opt3lyTxzP",
+          "name": "未完成"
+        }
+      ]
+    },
+    "fldWXUk0q0": {
+      "id": "fldWXUk0q0",
+      "name": "场次",
+      "type": 3,
+      "typeName": "SingleSelect/Status",
+      "options": [
+        {
+          "id": "opt2IlOrSI",
+          "name": "S1"
+        },
+        {
+          "id": "optVf3WAUO",
+          "name": "S2"
+        },
+        {
+          "id": "optTNrmh5O",
+          "name": "S3"
+        }
+      ]
+    },
+    "fld7RNntPG": {
+      "id": "fld7RNntPG",
+      "name": "清线",
+      "type": 17,
+      "typeName": "Attachment"
+    },
+    "fldzH4Bq93": {
+      "id": "fldzH4Bq93",
+      "name": "排期始点（角色原画）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "MM-dd"
+    },
+    "fld1ZmZYQV": {
+      "id": "fld1ZmZYQV",
+      "name": "清线是否完成",
+      "type": 3,
+      "typeName": "SingleSelect/Status",
+      "options": [
+        {
+          "id": "optBeVRwqY",
+          "name": "已完成"
+        },
+        {
+          "id": "optSK3CYz9",
+          "name": "未完成"
+        }
+      ]
+    },
+    "fldTRr7yhG": {
+      "id": "fldTRr7yhG",
+      "name": "清线负责人",
+      "type": 11,
+      "typeName": "Person",
+      "multiple": true
+    },
+    "fldO4v4q8y": {
+      "id": "fldO4v4q8y",
+      "name": "上色是否完成",
+      "type": 3,
+      "typeName": "SingleSelect/Status",
+      "options": [
+        {
+          "id": "optykBlTUh",
+          "name": "已完成"
+        },
+        {
+          "id": "optu5KYTYI",
+          "name": "未完成"
+        }
+      ]
+    },
+    "fldq1Yt2z3": {
+      "id": "fldq1Yt2z3",
+      "name": "排期终点（3D）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "MM-dd"
+    },
+    "fldR8qXhdV": {
+      "id": "fldR8qXhdV",
+      "name": "原画难度",
+      "type": 3,
+      "typeName": "SingleSelect/Status",
+      "options": [
+        {
+          "id": "optQvcQDm3",
+          "name": "S"
+        },
+        {
+          "id": "opt1psF8Sb",
+          "name": "A"
+        },
+        {
+          "id": "optyHyJw8p",
+          "name": "B"
+        },
+        {
+          "id": "optUhcXgqP",
+          "name": "C"
+        }
+      ]
+    },
+    "fldyoBo1Ey": {
+      "id": "fldyoBo1Ey",
+      "name": "排期终点（绘景）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "MM-dd"
+    },
+    "fldiy8ScAu": {
+      "id": "fldiy8ScAu",
+      "name": "角色原画",
+      "type": 17,
+      "typeName": "Attachment"
+    },
+    "fld4IlP6U6": {
+      "id": "fld4IlP6U6",
+      "name": "镜头缩略图Filename",
+      "type": 1,
+      "typeName": "Text"
+    },
+    "fldowZd2XP": {
+      "id": "fldowZd2XP",
+      "name": "上色负责人",
+      "type": 11,
+      "typeName": "Person",
+      "multiple": true
+    },
+    "fldrNiULZx": {
+      "id": "fldrNiULZx",
+      "name": "排期终点（上色）",
+      "type": 1,
+      "typeName": "Text"
+    },
+    "fldvsnaOAf": {
+      "id": "fldvsnaOAf",
+      "name": "角色原画已完成",
+      "type": 3,
+      "typeName": "SingleSelect/Status",
+      "options": [
+        {
+          "id": "optTJH1ZjP",
+          "name": "已完成"
+        },
+        {
+          "id": "optOHFJngQ",
+          "name": "未完成"
+        }
+      ]
+    },
+    "fldj4s43RX": {
+      "id": "fldj4s43RX",
+      "name": "排期始点（绘景）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "MM-dd"
+    },
+    "fld67smdxA": {
+      "id": "fld67smdxA",
+      "name": "3D/非原画特效负责人",
+      "type": 11,
+      "typeName": "Person",
+      "multiple": false
+    },
+    "fldG04l9e4": {
+      "id": "fldG04l9e4",
+      "name": "序号",
+      "type": 1,
+      "typeName": "Text"
+    },
+    "fld3OZPmN3": {
+      "id": "fld3OZPmN3",
+      "name": "排期始点（3D）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "MM-dd"
+    },
+    "fldd2EjTTQ": {
+      "id": "fldd2EjTTQ",
+      "name": "合成人",
+      "type": 11,
+      "typeName": "Person",
+      "multiple": false
+    },
+    "flde54MR7a": {
+      "id": "flde54MR7a",
+      "name": "修改人",
+      "type": 1004,
+      "typeName": "LastModifiedBy"
+    },
+    "fldS0kbLGR": {
+      "id": "fldS0kbLGR",
+      "name": "进度",
+      "type": 24,
+      "typeName": "Stage",
+      "stages": [
+        {
+          "id": "opterA05N3",
+          "name": "原画",
+          "kind": "Default",
+          "linkedField": "fldiy8ScAu"
+        },
+        {
+          "id": "optDjKQRK3",
+          "name": "清线",
+          "kind": "Default",
+          "linkedField": "fld7RNntPG"
+        },
+        {
+          "id": "opte4WBnL3",
+          "name": "上色",
+          "kind": "Default",
+          "linkedField": "fldnPwKUwx"
+        },
+        {
+          "id": "optejf0d0a",
+          "name": "合成",
+          "kind": "Default",
+          "linkedField": null
+        },
+        {
+          "id": "opteFS1YvQ",
+          "name": "已结束",
+          "kind": "EndDone",
+          "linkedField": null
+        },
+        {
+          "id": "optHJnvCo5",
+          "name": "返修中",
+          "kind": "EndCancel",
+          "linkedField": null
+        }
+      ],
+      "convertMode": "NextStage"
+    },
+    "fldjQJNqEB": {
+      "id": "fldjQJNqEB",
+      "name": "排期始点（上色）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "yyyy/MM/dd"
+    },
+    "fldrkMHDAN": {
+      "id": "fldrkMHDAN",
+      "name": "最后更新时间",
+      "type": 1002,
+      "typeName": "LastModifiedTime"
+    },
+    "fldPn4hCQG": {
+      "id": "fldPn4hCQG",
+      "name": "3D/特效是否完成",
+      "type": 3,
+      "typeName": "SingleSelect/Status",
+      "options": [
+        {
+          "id": "opt7iQFNY3",
+          "name": "已完成"
+        },
+        {
+          "id": "optJv1AKvM",
+          "name": "未完成"
+        }
+      ]
+    },
+    "fldz0srXxF": {
+      "id": "fldz0srXxF",
+      "name": "参考（透视\\book\\美术\\分配）",
+      "type": 17,
+      "typeName": "Attachment"
+    },
+    "fldcVsh4PD": {
+      "id": "fldcVsh4PD",
+      "name": "是否定稿（角色原画）",
+      "type": 3,
+      "typeName": "SingleSelect/Status",
+      "options": [
+        {
+          "id": "optuysvpg4",
+          "name": "待修改"
+        },
+        {
+          "id": "optk2cVzOl",
+          "name": "已确定"
+        }
+      ]
+    },
+    "fldSIiIAT4": {
+      "id": "fldSIiIAT4",
+      "name": "镜头缩略图",
+      "type": 17,
+      "typeName": "Attachment"
+    },
+    "fldxX2sOKx": {
+      "id": "fldxX2sOKx",
+      "name": "合成",
+      "type": 2,
+      "typeName": "Number",
+      "min": 0,
+      "max": 2
+    },
+    "fldA0aSL1Y": {
+      "id": "fldA0aSL1Y",
+      "name": "排期终点（清上）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "MM-dd"
+    },
+    "fldnPwKUwx": {
+      "id": "fldnPwKUwx",
+      "name": "上色",
+      "type": 17,
+      "typeName": "Attachment"
+    },
+    "fld0kPSlzQ": {
+      "id": "fld0kPSlzQ",
+      "name": "镜头描述/备注",
+      "type": 1,
+      "typeName": "Text"
+    },
+    "fldFPhDe0K": {
+      "id": "fldFPhDe0K",
+      "name": "模块",
+      "type": 1,
+      "typeName": "Text"
+    },
+    "fldUQ4Gukz": {
+      "id": "fldUQ4Gukz",
+      "name": "排期始点（清上）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "MM-dd"
+    },
+    "fldGV1tR8j": {
+      "id": "fldGV1tR8j",
+      "name": "返修内容",
+      "type": 17,
+      "typeName": "Attachment"
+    },
+    "fld4vCQpsq": {
+      "id": "fld4vCQpsq",
+      "name": "排期始点（合成）",
+      "type": 5,
+      "typeName": "DateTime",
+      "dateFormat": "MM-dd"
+    },
+    "fldVdXjCoQ": {
+      "id": "fldVdXjCoQ",
+      "name": "绘景负责人",
+      "type": 11,
+      "typeName": "Person",
+      "multiple": false
+    },
+    "fldRWAydab": {
+      "id": "fldRWAydab",
+      "name": "原画负责人",
+      "type": 11,
+      "typeName": "Person",
+      "multiple": true
+    },
+    "fldoCuQ8ZQ": {
+      "id": "fldoCuQ8ZQ",
+      "name": "参考负责人",
+      "type": 11,
+      "typeName": "Person",
+      "multiple": false
+    },
+    "fldpV90G6s": {
+      "id": "fldpV90G6s",
+      "name": "3D/非原画特效",
+      "type": 3,
+      "typeName": "SingleSelect/Status",
+      "options": [
+        {
+          "id": "optAZm9F83",
+          "name": "未完成"
+        },
+        {
+          "id": "optOExAMpJ",
+          "name": "已完成"
+        },
+        {
+          "id": "optCNJu3xz",
+          "name": "无"
+        }
+      ]
+    },
+    "fldS5E41DT": {
+      "id": "fldS5E41DT",
+      "name": "补充任务人员",
+      "type": 11,
+      "typeName": "Person",
+      "multiple": false
+    },
+    "fldp7RYAQ5": {
+      "id": "fldp7RYAQ5",
+      "name": "场次镜头号",
+      "type": 1,
+      "typeName": "Text"
+    },
+    "fld92kOvtc": {
+      "id": "fld92kOvtc",
+      "name": "补充任务",
+      "type": 1,
+      "typeName": "Text"
+    }
+  },
+  "categories": {
+    "identity": [
+      "fldG04l9e4",
+      "fldp7RYAQ5",
+      "fldWXUk0q0",
+      "fldFPhDe0K",
+      "fld0kPSlzQ",
+      "fldR8qXhdV",
+      "fld4IlP6U6"
+    ],
+    "attachments": [
+      "fldSIiIAT4",
+      "fldz0srXxF",
+      "fldiy8ScAu",
+      "fld7RNntPG",
+      "fldhhN9HAA",
+      "fldnPwKUwx",
+      "fldGV1tR8j"
+    ],
+    "stage_completion": [
+      "fldcVsh4PD",
+      "fldvsnaOAf",
+      "fld1ZmZYQV",
+      "fldFMjGeab",
+      "fldO4v4q8y",
+      "fldPn4hCQG",
+      "fldpV90G6s",
+      "fldxX2sOKx",
+      "fldS0kbLGR"
+    ],
+    "people": [
+      "fldRWAydab",
+      "fldTRr7yhG",
+      "fldowZd2XP",
+      "fldVdXjCoQ",
+      "fldoCuQ8ZQ",
+      "fld67smdxA",
+      "fldd2EjTTQ",
+      "fldS5E41DT"
+    ],
+    "schedule": [
+      "fldzH4Bq93",
+      "fldXynPjpD",
+      "fldj4s43RX",
+      "fldyoBo1Ey",
+      "fldUQ4Gukz",
+      "fldA0aSL1Y",
+      "fldjQJNqEB",
+      "fldrNiULZx",
+      "fld3OZPmN3",
+      "fldq1Yt2z3",
+      "fld4vCQpsq",
+      "fld87th4Se"
+    ],
+    "system": [
+      "fldrkMHDAN",
+      "flde54MR7a",
+      "fld92kOvtc"
+    ]
+  },
+  "views": [
+    {
+      "id": "vewKp7lvv2",
+      "name": "角色原画",
+      "type": 5,
+      "groupBy": [
+        "fldRWAydab"
+      ],
+      "titleField": "fldG04l9e4"
+    },
+    {
+      "id": "vew4RKF5XB",
+      "name": "参考",
+      "type": 5,
+      "groupBy": [
+        "fldoCuQ8ZQ"
+      ],
+      "titleField": "fldG04l9e4"
+    },
+    {
+      "id": "vewfVd5nlJ",
+      "name": "概览视图",
+      "type": 1,
+      "groupBy": [
+        "fldWXUk0q0"
+      ],
+      "titleField": null
+    },
+    {
+      "id": "vewWSCYRVG",
+      "name": "合成",
+      "type": 5,
+      "groupBy": [
+        "fldd2EjTTQ"
+      ],
+      "titleField": "fldG04l9e4"
+    },
+    {
+      "id": "vewSusBDlR",
+      "name": "3D/特效",
+      "type": 5,
+      "groupBy": [
+        "fld67smdxA"
+      ],
+      "titleField": "fldG04l9e4"
+    },
+    {
+      "id": "vewvvghRN3",
+      "name": "人员分配",
+      "type": 1,
+      "groupBy": [
+        "fldWXUk0q0"
+      ],
+      "titleField": null
+    },
+    {
+      "id": "vewG0tD9KH",
+      "name": "超级简单进度图",
+      "type": 1,
+      "groupBy": [
+        "fldWXUk0q0"
+      ],
+      "titleField": null
+    },
+    {
+      "id": "vewpEV2bhu",
+      "name": "上色",
+      "type": 5,
+      "groupBy": [
+        "fldowZd2XP"
+      ],
+      "titleField": "fldG04l9e4"
+    },
+    {
+      "id": "vewTPDFzKe",
+      "name": "绘景",
+      "type": 5,
+      "groupBy": [
+        "fldVdXjCoQ"
+      ],
+      "titleField": "fldFMjGeab"
+    },
+    {
+      "id": "vewVcZExwV",
+      "name": "清线",
+      "type": 5,
+      "groupBy": [
+        "fldTRr7yhG"
+      ],
+      "titleField": "fldG04l9e4"
+    }
+  ],
+  "milestones": {
+    "mlsGqRT4": {
+      "date": 1769097600000,
+      "description": "DDL"
+    },
+    "mlsAgWxg": {
+      "date": 1769529600000,
+      "description": "☠️"
+    }
+  },
+  "stageTransitions": [
+    {
+      "from": "原画",
+      "to": "清线",
+      "triggerField": "fld7RNntPG",
+      "rule": "attachment uploaded"
+    },
+    {
+      "from": "清线",
+      "to": "上色",
+      "triggerField": "fldnPwKUwx",
+      "rule": "attachment uploaded"
+    },
+    {
+      "from": "上色",
+      "to": "合成",
+      "rule": "workflow wkfpaC42ETLuZYP3"
+    },
+    {
+      "from": "合成",
+      "to": "已结束",
+      "rule": "workflow wkfW9sC0rQyadiBM"
+    }
+  ],
+  "filenameToField": {
+    "原画|角色原画|char|character": "fldiy8ScAu",
+    "清线|线稿|lineart|line": "fld7RNntPG",
+    "上色|color|着色": "fldnPwKUwx",
+    "场景|绘景|bg|background|scene": "fldhhN9HAA",
+    "参考|ref|reference|透视": "fldz0srXxF",
+    "缩略|缩略图|thumb|thumbnail|preview": "fldSIiIAT4",
+    "返修|rework|修改": "fldGV1tR8j"
+  }
+}

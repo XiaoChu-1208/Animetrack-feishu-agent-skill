@@ -1,0 +1,20 @@
+# 用户运行时状态 — 不要 commit 含真实 app_token 的版本
+# runtime.json 模板（空值）保留在仓库；本地填了真实值后建议从 git 排除
+# 可以解开下一行 # 来本地忽略
+# runtime.json
+
+# 备份目录 — 用户本地自动产生，含旧版本快照可能含敏感信息
+.history/*
+!.history/README.md
+
+# 编辑器 / 系统噪音
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+desktop.ini
+
+# 临时分析产物
+*.bak
+*.tmp
+*.log

@@ -1,0 +1,93 @@
+{
+  "_comment": "自动排期参数。所有时长单位为工作日（1 日 = 8h）。SKILL.md §9.2 引用此文件。",
+  "stageDuration": {
+    "参考":     { "S": 1.0, "A": 0.5, "B": 0.5, "C": 0.5 },
+    "角色原画": { "S": 5.0, "A": 3.0, "B": 2.0, "C": 1.0 },
+    "清线":     { "S": 3.0, "A": 2.0, "B": 1.0, "C": 0.5 },
+    "上色":     { "S": 4.0, "A": 3.0, "B": 2.0, "C": 1.0 },
+    "绘景":     { "S": 4.0, "A": 3.0, "B": 2.0, "C": 1.0 },
+    "3D/特效":  { "S": 5.0, "A": 4.0, "B": 3.0, "C": 2.0 },
+    "合成":     { "S": 1.0, "A": 1.0, "B": 0.5, "C": 0.5 }
+  },
+  "stageDAG": {
+    "参考":     { "next": ["角色原画"], "optional": true },
+    "角色原画": { "next": ["清线"], "depends": ["参考"] },
+    "清线":     { "next": ["上色"], "depends": ["角色原画"] },
+    "上色":     { "next": ["合成"], "depends": ["清线"] },
+    "绘景":     { "next": ["合成"], "depends": [], "parallel": true },
+    "3D/特效":  { "next": ["合成"], "depends": [], "parallel": true },
+    "合成":     { "next": [], "depends": ["上色", "绘景", "3D/特效"] }
+  },
+  "stageToFields": {
+    "参考":     { "person": "fldoCuQ8ZQ", "start": "fldzH4Bq93", "end": "fldXynPjpD", "attachment": "fldz0srXxF", "note": "参考与角色原画共用始/终点字段" },
+    "角色原画": { "person": "fldRWAydab", "start": "fldzH4Bq93", "end": "fldXynPjpD", "attachment": "fldiy8ScAu", "complete": "fldvsnaOAf", "draftStatus": "fldcVsh4PD" },
+    "清线":     { "person": "fldTRr7yhG", "start": "fldUQ4Gukz", "end": "fldA0aSL1Y", "attachment": "fld7RNntPG", "complete": "fld1ZmZYQV", "note": "清/上共用一段 fldUQ4Gukz/fldA0aSL1Y" },
+    "上色":     { "person": "fldowZd2XP", "start": "fldjQJNqEB", "end": "fldrNiULZx", "attachment": "fldnPwKUwx", "complete": "fldO4v4q8y", "endIsText": true },
+    "绘景":     { "person": "fldVdXjCoQ", "start": "fldj4s43RX", "end": "fldyoBo1Ey", "attachment": "fldhhN9HAA", "complete": "fldFMjGeab", "note": "不联动主进度 Stage 字段" },
+    "3D/特效":  { "person": "fld67smdxA", "start": "fld3OZPmN3", "end": "fldq1Yt2z3", "complete": "fldPn4hCQG", "altComplete": "fldpV90G6s" },
+    "合成":     { "person": "fldd2EjTTQ", "start": "fld4vCQpsq", "end": "fld87th4Se", "progress": "fldxX2sOKx" }
+  },
+  "constraints": {
+    "perPersonConcurrent": 2,
+    "weekWorkDays": 5,
+    "skipWeekends": true,
+    "bufferRatio": 0.15,
+    "minBufferDays": 3,
+    "defaultDifficulty": "B"
+  },
+  "scheduling": {
+    "method": "backwardFromDDL",
+    "ddlSource": "milestoneMap.mlsGqRT4",
+    "fallbackPrompt": "DDL 缺失，请告诉我总交付日（YYYY-MM-DD）",
+    "tieBreaker": [
+      "负载最低优先",
+      "卡级匹配度高优先",
+      "加入项目早的人优先（资历）"
+    ]
+  },
+  "outputContract": {
+    "writePolicy": "dryRunFirst",
+    "confirmationRequired": true,
+    "confirmKeyword": "确认",
+    "rollbackOnError": true,
+    "reviewSummaryRequired": true
+  },
+  "messaging": {
+    "perAssigneeDM": true,
+    "groupDigest": true,
+    "checkpointPing": "前 1 天",
+    "weeklyDigestCron": "每周一 09:00"
+  },
+  "completion": {
+    "_comment": "完成度统计参数。SKILL.md §10 引用。难度权重 = 该难度卡的总工时（stageDuration 各阶段求和），自然反映难卡占用更多产能的事实。",
+    "difficultyWeight": {
+      "S": 23.0,
+      "A": 16.5,
+      "B": 11.0,
+      "C": 6.5,
+      "D_note": "schema 当前没有 D；如用户启用 D 卡，建议权重 3.5（约 C 一半）并新增 stageDuration.D 列",
+      "unsetDefault": "B"
+    },
+    "stageDoneRules": {
+      "_comment": "判定每个工序是否完成的字段规则。OR 逻辑：满足任一条件即视为完成。",
+      "参考":     { "rule": "fldz0srXxF 附件非空", "optional": true },
+      "角色原画": { "rule": "fldvsnaOAf == 已完成 OR Stage(fldS0kbLGR) ∈ {清线,上色,合成,已结束}" },
+      "清线":     { "rule": "fld1ZmZYQV == 已完成 OR Stage(fldS0kbLGR) ∈ {上色,合成,已结束}" },
+      "上色":     { "rule": "fldO4v4q8y == 已完成 OR Stage(fldS0kbLGR) ∈ {合成,已结束}" },
+      "绘景":     { "rule": "fldFMjGeab == 已完成", "note": "独立轨，不依赖主 Stage" },
+      "3D/特效":  { "rule": "fldPn4hCQG == 已完成 OR fldpV90G6s ∈ {已完成,无}" },
+      "合成":     { "rule": "fldxX2sOKx == 2 OR Stage(fldS0kbLGR) == 已结束" },
+      "返修中":   { "rule": "Stage(fldS0kbLGR) == 返修中", "treatAs": "保留之前已完成阶段的工时；返修阶段本身不计入完成" }
+    },
+    "outputSections": [
+      "weighted_pct (按难度+工时加权)",
+      "simple_pct (镜头平等加权)",
+      "delta (weighted - simple，负值=剩下的多是难卡)",
+      "byDifficulty (S/A/B/C 各自完成率 + 工时占比)",
+      "byStage (各阶段进行中/已完成数量)",
+      "risks (剩余 S+A 卡占总工时比例、DDL 余量、超期未完成数)"
+    ],
+    "minSampleForDelta": 3,
+    "displayPrecision": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_comment": "当前会话绑定的 base 信息。BOOTSTRAP.md §3 流程产出，agent 自动维护。用户不要手动改。app_token 为空 = 未绑定，agent 进 bootstrap 模式。",
+  "bound_base": {
+    "app_token": "",
+    "base_url": "",
+    "project_name": "",
+    "ddl_date": "",
+    "bound_at": ""
+  },
+  "bound_tables": {
+    "main": "tblxJGAeyRCOWOwa",
+    "team_config": null,
+    "archive_tables": []
+  },
+  "schema_match": "unbound",
+  "last_synced_at": ""
+}

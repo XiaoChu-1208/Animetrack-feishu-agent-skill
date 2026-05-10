@@ -1,0 +1,213 @@
+[
+  {
+    "id": "7621355616983960775",
+    "trigger": "datetimeField",
+    "triggerTarget": "ref_tblHDgPGwGllkwzA_fldA0aSL1Y",
+    "messagePreview": "宝你的清上结束了吗要交付了",
+    "stepCount": 2,
+    "stepTypes": [
+      "ReminderTrigger",
+      "LarkMessageAction"
+    ]
+  },
+  {
+    "id": "7621355616983977159",
+    "trigger": "datetimeField",
+    "triggerTarget": "ref_tblHDgPGwGllkwzA_fldyoBo1Ey",
+    "messagePreview": "宝你的场景结束了吗要交付了",
+    "stepCount": 2,
+    "stepTypes": [
+      "ReminderTrigger",
+      "LarkMessageAction"
+    ]
+  },
+  {
+    "id": "7621355616983993543",
+    "trigger": "datetimeField",
+    "triggerTarget": "ref_tblHDgPGwGllkwzA_fldXynPjpD",
+    "messagePreview": "宝你的原画结束了吗要交付了",
+    "stepCount": 2,
+    "stepTypes": [
+      "ReminderTrigger",
+      "LarkMessageAction"
+    ]
+  },
+  {
+    "id": "7621355616984009927",
+    "trigger": "datetimeField",
+    "triggerTarget": "ref_tblHDgPGwGllkwzA_fldq1Yt2z3",
+    "messagePreview": "宝你的3D结束了吗要交付了",
+    "stepCount": 2,
+    "stepTypes": [
+      "ReminderTrigger",
+      "LarkMessageAction"
+    ]
+  },
+  {
+    "id": "7621355616984026311",
+    "trigger": "setRecord",
+    "triggerTarget": "ref_tblMtIj5VAIHZf9w",
+    "messagePreview": null,
+    "stepCount": 13,
+    "stepTypes": [
+      "SetRecordTrigger",
+      "IfElseBranch",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction"
+    ]
+  },
+  {
+    "id": "7621355616984042695",
+    "trigger": "setRecord",
+    "triggerTarget": "ref_tblMtIj5VAIHZf9w",
+    "messagePreview": null,
+    "stepCount": 13,
+    "stepTypes": [
+      "SetRecordTrigger",
+      "IfElseBranch",
+      "SetRecordAction",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction"
+    ]
+  },
+  {
+    "id": "7621355616984059079",
+    "trigger": "setRecord",
+    "triggerTarget": "ref_tblMtIj5VAIHZf9w",
+    "messagePreview": null,
+    "stepCount": 13,
+    "stepTypes": [
+      "SetRecordTrigger",
+      "IfElseBranch",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "SetRecordAction"
+    ]
+  },
+  {
+    "id": "7621355616984075463",
+    "trigger": "setRecord",
+    "triggerTarget": "ref_tblMtIj5VAIHZf9w",
+    "messagePreview": null,
+    "stepCount": 13,
+    "stepTypes": [
+      "SetRecordTrigger",
+      "IfElseBranch",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "IfElseBranch",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction"
+    ]
+  },
+  {
+    "id": "7621355616984091847",
+    "trigger": "setRecord",
+    "triggerTarget": "ref_tblMtIj5VAIHZf9w",
+    "messagePreview": null,
+    "stepCount": 7,
+    "stepTypes": [
+      "SetRecordTrigger",
+      "SwitchBranch",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction",
+      "SetRecordAction"
+    ]
+  },
+  {
+    "id": "7621355616984108231",
+    "trigger": "larkMessage",
+    "triggerTarget": null,
+    "messagePreview": "您好，镜头号为的相关信息如下：\n该镜头缩略图：\n\n角色原画完成状态：，。\n清线完成状态：，。\n上色完成状态：，。\n绘景完成状态：，。\n3D特效完成状态：，。\n合",
+    "stepCount": 8,
+    "stepTypes": [
+      "LarkMessageTrigger",
+      "SwitchBranch",
+      "FindRecordAction",
+      "GenerateAiTextAction",
+      "LarkMessageAction",
+      "GenerateAiTextAction",
+      "FindRecordAction",
+      "LarkMessageAction"
+    ]
+  },
+  {
+    "id": "7621355616984124615",
+    "trigger": "larkMessage",
+    "triggerTarget": null,
+    "messagePreview": "您好，目前低完成度镜头信息如下：\n\n\n请您知悉，如有疑问可随时沟通。",
+    "stepCount": 11,
+    "stepTypes": [
+      "LarkMessageTrigger",
+      "SwitchBranch",
+      "FindRecordAction",
+      "GenerateAiTextAction",
+      "LarkMessageAction",
+      "GenerateAiTextAction",
+      "FindRecordAction",
+      "LarkMessageAction",
+      "FindRecordAction",
+      "GenerateAiTextAction",
+      "LarkMessageAction"
+    ]
+  },
+  {
+    "id": "7621355616984140999",
+    "trigger": "larkMessage",
+    "triggerTarget": null,
+    "messagePreview": "您好，以下是今天的更新记录及感谢语：\n",
+    "stepCount": 4,
+    "stepTypes": [
+      "LarkMessageTrigger",
+      "FindRecordAction",
+      "GenerateAiTextAction",
+      "LarkMessageAction"
+    ]
+  },
+  {
+    "id": "7621355616984157383",
+    "trigger": "cron",
+    "triggerTarget": null,
+    "messagePreview": "您好，以下是今天的更新记录及感谢：\n",
+    "stepCount": 4,
+    "stepTypes": [
+      "TimerTrigger",
+      "FindRecordAction",
+      "GenerateAiTextAction",
+      "LarkMessageAction"
+    ]
+  }
+]

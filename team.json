@@ -1,0 +1,86 @@
+{
+  "_comment": "团队配置表 schema 模板。首次使用时让 Aily 在 base 内创建一张名为「团队配置」的新表，字段按下面定义建。",
+  "tableName": "团队配置",
+  "primaryField": "姓名",
+  "fields": [
+    {
+      "name": "姓名",
+      "type": "Text",
+      "isPrimary": true,
+      "required": true
+    },
+    {
+      "name": "飞书人员",
+      "type": "Person",
+      "multiple": false,
+      "required": true,
+      "note": "用于自动化 @ 提醒，缺这个就发不出私信"
+    },
+    {
+      "name": "职能",
+      "type": "MultiSelect",
+      "options": [
+        "参考",
+        "角色原画",
+        "清线",
+        "上色",
+        "绘景",
+        "3D/特效",
+        "合成",
+        "导演",
+        "制片"
+      ],
+      "required": true
+    },
+    {
+      "name": "卡级偏好",
+      "type": "MultiSelect",
+      "options": ["S", "A", "B", "C"],
+      "required": false,
+      "note": "仅原画职能填；空=全接；用于 §9.1 分配规则筛选"
+    },
+    {
+      "name": "并发上限",
+      "type": "Number",
+      "default": 2,
+      "note": "同时在手任务上限。某些主力可上调，新人下调"
+    },
+    {
+      "name": "周可用工时",
+      "type": "Number",
+      "default": 5,
+      "note": "工作日数/周。兼职可填 2-3"
+    },
+    {
+      "name": "加入日期",
+      "type": "Date",
+      "required": false
+    },
+    {
+      "name": "离场日期",
+      "type": "Date",
+      "required": false,
+      "note": "空=在职；离场不要删行，保留历史归属"
+    },
+    {
+      "name": "备注",
+      "type": "Text",
+      "required": false
+    }
+  ],
+  "questionScript": [
+    "这个项目的原画师都有谁？分别能接哪些难度的卡（S/A/B/C）？",
+    "清线负责人？",
+    "上色负责人？",
+    "绘景负责人？",
+    "3D/特效负责人？",
+    "合成负责人？",
+    "参考/导演/制片？（可选）",
+    "每人同时最多能接几张？默认 2，特别忙的人可以单独说"
+  ],
+  "intakeRules": {
+    "newMember": "用户说「X 加入了」→ 必须问到飞书 ID + 职能 + 卡级（如果是原画）。其他可省。写入后报告当前未分配任务数",
+    "leave": "用户说「X 离开了」→ 写离场日期；扫 ta 在手未完成镜头列出，问是否重派；不要删行",
+    "multiRole": "一人多职能用多选字段；分配时按 §9.1 规则在每个职能里独立计算负载"
+  }
+}
